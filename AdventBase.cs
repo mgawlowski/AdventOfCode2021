@@ -5,12 +5,12 @@ namespace AdventOfCode2021
 {
     public abstract class AdventBase
     {
-        protected string[] lines;
+        protected string[] inputLines;
 
         public AdventBase()
         {
             var filename = $@"../../../inputs/{GetType().Name.ToLower()}.txt";
-            lines = File.ReadAllLines(filename);
+            inputLines = File.ReadAllLines(filename);
         }
 
         public abstract void RunPart1();

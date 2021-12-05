@@ -9,7 +9,7 @@ namespace AdventOfCode2021
             int? previous = null;
             int valueIncreasedCount = 0;
 
-            foreach (var line in lines)
+            foreach (var line in inputLines)
             {
                 var current = int.Parse(line);
 
@@ -34,10 +34,10 @@ namespace AdventOfCode2021
         {
             int valueIncreasedCount = 0;
 
-            for (int i = 0; i < lines.Length - 3; i++)
+            for (int i = 0; i < inputLines.Length - 3; i++)
             {
-                var current = SumThreeLinesValues(lines, i);
-                var next = SumThreeLinesValues(lines, i + 1);
+                var current = SumThreeLinesValues(inputLines, i);
+                var next = SumThreeLinesValues(inputLines, i + 1);
 
                 if (next > current)
                 {
