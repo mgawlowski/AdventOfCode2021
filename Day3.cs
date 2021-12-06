@@ -11,7 +11,7 @@ namespace AdventOfCode2021
 
         public override void RunPart1()
         {
-            var binariesList = inputLines.ToList();
+            var binariesList = InputLines.ToList();
 
             var gammaRateBinary = CalculateGammaRate(binariesList);
             var epsilonRateBinary = CalculateEpsilonRate(gammaRateBinary);
@@ -49,7 +49,7 @@ namespace AdventOfCode2021
 
         public override void RunPart2()
         {
-            var binariesList = inputLines.ToList();
+            var binariesList = InputLines.ToList();
 
             var oxygenGeneratorRating = CalculateOxygenGeneratorRating(binariesList);
             var co2ScrubberRating = CalculateCO2ScrubberRating(binariesList);

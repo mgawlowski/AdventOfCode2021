@@ -12,7 +12,7 @@ namespace AdventOfCode2021
             int horizontal = 0;
             int depth = 0;
 
-            foreach (var line in inputLines)
+            foreach (var line in InputLines)
             {
                 var input = line.Split(' ');
                 var direction = input[0];
@@ -48,7 +48,7 @@ namespace AdventOfCode2021
             int depth = 0;
             int aim = 0;
 
-            foreach (var line in inputLines)
+            foreach (var line in InputLines)
             {
                 var input = line.Split(' ');
                 var direction = input[0];

@@ -6,7 +6,7 @@ namespace AdventOfCode2021
     {
         static void Main(string[] args)
         {
-            AdventBase puzzle = new Day3();
+            AdventBase puzzle = new Day4();
             puzzle.RunPart1();
             puzzle.RunPart2();
         }
