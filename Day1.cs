@@ -4,6 +4,9 @@ namespace AdventOfCode2021
 {
     public class Day1 : AdventBase
     {
+        public Day1() : base("1559", "1600")
+        { }
+
         public override void RunPart1()
         {
             int? previous = null;
@@ -27,7 +30,7 @@ namespace AdventOfCode2021
                 previous = current;
             }
 
-            Console.WriteLine(valueIncreasedCount);
+            PrintPart1Result(valueIncreasedCount);
         }
 
         public override void RunPart2()
@@ -45,7 +48,7 @@ namespace AdventOfCode2021
                 }
             }
 
-            Console.WriteLine(valueIncreasedCount);
+            PrintPart2Result(valueIncreasedCount);
         }
 
         private int SumThreeLinesValues(string[] lines, int startIndex)
