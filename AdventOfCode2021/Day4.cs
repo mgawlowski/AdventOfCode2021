@@ -4,14 +4,9 @@ using System.Linq;
 
 namespace AdventOfCode2021
 {
-    public class Day4 : AdventBase
+    public class Day4 : DayBase
     {
-        private class Position { public int Number; public bool Check; };
-
-        public Day4() : base("64084", "12833")
-        { }
-
-        public override void RunPart1()
+        public override string RunPart1()
         {
             var inputList = InputLines.Where(line => !string.IsNullOrWhiteSpace(line)).ToList();
 
@@ -40,10 +35,10 @@ namespace AdventOfCode2021
 
             var result = winningNumber * unmarkedSum;
 
-            PrintPart1Result(result);
+            return result.ToString();
         }
 
-        public override void RunPart2()
+        public override string RunPart2()
         {
             var inputList = InputLines.Where(line => !string.IsNullOrWhiteSpace(line)).ToList();
 
@@ -78,7 +73,14 @@ namespace AdventOfCode2021
 
             var result = winningNumber * unmarkedSum;
 
-            PrintPart2Result(result);
+            return result.ToString();
+        }
+
+        private class Position
+        {
+            public int Number { get; set; }
+
+            public bool Check { get; set; }
         }
 
         private Position[,] Get5x5Board(IEnumerable<string> boardInput)

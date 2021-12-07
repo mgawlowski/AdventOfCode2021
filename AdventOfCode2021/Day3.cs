@@ -4,12 +4,9 @@ using System.Linq;
 
 namespace AdventOfCode2021
 {
-    public class Day3 : AdventBase
+    public class Day3 : DayBase
     {
-        public Day3() : base("3958484", "1613181")
-        { }
-
-        public override void RunPart1()
+        public override string RunPart1()
         {
             var binariesList = InputLines.ToList();
 
@@ -18,7 +15,7 @@ namespace AdventOfCode2021
 
             var result = BinaryToDecimal(gammaRateBinary) * BinaryToDecimal(epsilonRateBinary);
 
-            PrintPart1Result(result);
+            return result.ToString();
         }
 
         private string CalculateGammaRate(List<string> binariesList)
@@ -47,7 +44,7 @@ namespace AdventOfCode2021
             return epsilonRate;
         }
 
-        public override void RunPart2()
+        public override string RunPart2()
         {
             var binariesList = InputLines.ToList();
 
@@ -56,7 +53,7 @@ namespace AdventOfCode2021
 
             var result = oxygenGeneratorRating * co2ScrubberRating;
 
-            PrintPart2Result(result);
+            return result.ToString();
         }
 
         private int CalculateOxygenGeneratorRating(List<string> binariesList)

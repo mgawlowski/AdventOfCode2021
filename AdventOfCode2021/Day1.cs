@@ -2,12 +2,9 @@
 
 namespace AdventOfCode2021
 {
-    public class Day1 : AdventBase
+    public class Day1 : DayBase
     {
-        public Day1() : base("1559", "1600")
-        { }
-
-        public override void RunPart1()
+        public override string RunPart1()
         {
             int? previous = null;
             int valueIncreasedCount = 0;
@@ -30,10 +27,10 @@ namespace AdventOfCode2021
                 previous = current;
             }
 
-            PrintPart1Result(valueIncreasedCount);
+            return valueIncreasedCount.ToString();
         }
 
-        public override void RunPart2()
+        public override string RunPart2()
         {
             int valueIncreasedCount = 0;
 
@@ -48,7 +45,7 @@ namespace AdventOfCode2021
                 }
             }
 
-            PrintPart2Result(valueIncreasedCount);
+            return valueIncreasedCount.ToString();
         }
 
         private int SumThreeLinesValues(string[] lines, int startIndex)

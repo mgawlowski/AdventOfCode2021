@@ -2,12 +2,9 @@
 
 namespace AdventOfCode2021
 {
-    public class Day2 : AdventBase
+    public class Day2 : DayBase
     {
-        public Day2() : base("1670340", "1954293920")
-        { }
-
-        public override void RunPart1()
+        public override string RunPart1()
         {
             int horizontal = 0;
             int depth = 0;
@@ -39,10 +36,10 @@ namespace AdventOfCode2021
 
             var result = horizontal * depth;
 
-            PrintPart1Result(result);
+            return result.ToString();
         }
 
-        public override void RunPart2()
+        public override string RunPart2()
         {
             int horizontal = 0;
             int depth = 0;
@@ -76,7 +73,7 @@ namespace AdventOfCode2021
 
             var result = horizontal * depth;
 
-            PrintPart2Result(result);
+            return result.ToString();
         }
     }
 }
