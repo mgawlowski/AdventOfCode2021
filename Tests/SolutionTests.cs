@@ -18,6 +18,8 @@ namespace Tests
         [InlineData(4, 2, "12833")]
         [InlineData(6, 1, "389726")]
         [InlineData(6, 2, "1743335992042")]
+        [InlineData(7, 1, "333755")]
+        [InlineData(7, 2, "94017638")]
         public void Test(int day, int part, string solution)
         {
             Assert.Equal(solution, Run(day, part));
